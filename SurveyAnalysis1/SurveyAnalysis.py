@@ -16,9 +16,6 @@ def Significance(set1,set2):
     return stats.t.sf(T,df=F)
 
 
-
-
-
 #lists for vegetarians/vegans
 VMem= []
 VHapp= []
@@ -68,7 +65,6 @@ MFFit=[]
 MFStress=[]
 MFSick=[]
 
-
 for row in ws.rows:
    if(row[8].value)== "Yes":    #If person is vegetarian/vegan
        #Body confidence
@@ -88,7 +84,6 @@ for row in ws.rows:
           elif(row[2].value)=="Slightly uncomfortable":VMBodyConfidence.append(-1)
           elif(row[2].value)=="Moderately uncomfortable":VMBodyConfidence.append(-2)
           elif(row[2].value)=="Very uncomfortable":VMBodyConfidence.append(-3)
-
 
        elif(row[10].value)== "Female":
           if(row[2].value)=="Very comfortable":VFBodyConfidence.append(3)
